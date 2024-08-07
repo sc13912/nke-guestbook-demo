@@ -3,4 +3,4 @@ A containerized multi-tier web application using PHP & Redis, originally develop
 
 ![diagram](assets/guestbook.png "Guestbook K8s Architecture")
 
-The k8s deployment files of the demo app are customized to demonstratoe seamless integration with Nutanix Kubernetes Engine (NKE), by leveraging NKE platform capabilities such as out-of-the-box Container Storage Interface (CSI) and Container Network Interface (CNI) support. 
+The k8s deployment files here are customized to demonstratoe seamless integration with Nutanix Kubernetes Engine (NKE), by leveraging NKE platform capabilities such as out-of-the-box Container Storage Interface (CSI) and Container Network Interface (CNI) support. 
