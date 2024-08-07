@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  namespace: guestbook
+  name: redis-follower-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: default-storageclass 
+  resources:
+    requests:
+      storage: 2Gi
