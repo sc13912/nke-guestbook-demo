@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook-argo-demo
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/sc13912/nke-guestbook-demo.git
+    targetRevision: HEAD
+    path: argocd/dev
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: myguestbook
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
