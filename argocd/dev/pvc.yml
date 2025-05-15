@@ -6,7 +6,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: default-storageclass
+  storageClassName: synology-iscsi
   resources:
     requests:
       storage: 2Gi
@@ -18,7 +18,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: files-storageclass 
+  storageClassName: synology-nfs 
   resources:
     requests:
       storage: 5Gi
