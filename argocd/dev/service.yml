@@ -41,10 +41,12 @@ metadata:
   labels:
     app: guestbook
     tier: frontend
+    lbpool: dev  # Added LB VIP Pool for EKS Hybrid + Cilium demo
 spec:
   # Note: If you plan to use k8s ingress to terminate incoming requests, 
   # then change the frontend service type to: Cluster-IP
   type: LoadBalancer
+  loadBalancerClass: io.cilium/bgp-control-plane   # Added LB Class for EKS Hybrid + Cilium demo
   ports:
     # the port that this service should serve on
   - port: 80
