@@ -46,7 +46,7 @@ metadata:
     role: follower
     tier: backend
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: redis
